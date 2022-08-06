@@ -1,0 +1,22 @@
+<main style="background-color: #1a554f;" class="container overflow-auto shadow-lg p-3 mb-5 mt-2 rounded-lg" >
+    <h1 style="text-align: center; color: white;">Su saldo disponible en este momento es de:</h1>
+    <h2 style="color: white; text-align: center;">${{saldo}}</h2>
+    <br>
+        <div class="progress shadow-lg mb-2" style="height: 30px;">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar"[ngStyle]="barIn">{{textBarIn}}</div>
+        <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" [ngStyle]="barGs">{{textBarGs}}</div>
+        
+        </div>
+    <br>
+    <div class="conteiner text-center">
+      <div class="row hstack" style="display: flex; width: 100%;">
+        <div class="sm-12 col-lg-6 d-inline" style="width: 100%;flex: 1; padding: 16px; height: max-content;">
+        <app-lista-ingresos></app-lista-ingresos>
+      </div>
+      <div class="sm-12 col-lg-6 d-inline" style="width: 100%;flex: 1; padding: 16px; height: max-content;">
+      <app-lista-gastos></app-lista-gastos>
+    </div>
+      </div>
+    </div>
+        
+</main>

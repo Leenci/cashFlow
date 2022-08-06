@@ -1,0 +1,28 @@
+<div class="container ">
+  
+  <form [formGroup]="addGs" (ngSubmit)="add()">
+    <div class="mb-3 input-group">
+      <label class="col-form-label col-2">Concepto</label>
+      <select formControlName="concepto" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+        <option value="0">Open this select menu</option>
+        <option *ngFor="let concepto of listConceptos" value="{{concepto.id}}">{{concepto.nombre_concepto}}</option>
+        </select>
+    </div>
+    <div class="input-group mb-3">
+      <label class="col-form-label col-2">Fecha</label>
+      <input formControlName="fecha" type="date" class="form-control col-8" id="fecha">
+    </div>
+    <div class="mb-3 input-group">
+      <label class="col-form-label col-2">Monto</label>
+      <span class="input-group-text col-auto">$</span>
+      <input formControlName="monto" type="number" class="form-control col-auto" id="monto">
+    </div>
+    <div class="row justify-content-md-center modal-footer">
+      <button type="submit" class="col-10 text-center btn btn-success">Añadir</button>
+    </div>
+  </form>
+</div>
+
+
+
+  
